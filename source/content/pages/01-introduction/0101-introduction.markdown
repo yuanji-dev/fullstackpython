@@ -1,4 +1,4 @@
-title: Introduction
+title: 介绍
 category: page
 slug: introduction
 sort-order: 011
