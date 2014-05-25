@@ -4,92 +4,57 @@ slug: web-frameworks
 sort-order: 021
 choice1url: /django.html
 choice1icon: fa-terminal fa-inverse
-choice1text: Tell me more about the Django framework.
+choice1text: 告诉我更多关于Django框架的知识。
 choice2url: /flask.html
 choice2icon: fa-flask
-choice2text: I want to learn more about the Flask web framework.
+choice2text: 我想了解更多关于Flask框架的知识。
 choice3url: /bottle.html
 choice3icon: fa-tint fa-inverse
-choice3text: Show me more information on Bottle.
+choice3text: 给我看看更多关于Bottle框架的资料吧。
 choice4url: /other-web-frameworks.html
 choice4icon: fa-question fa-inverse
-choice4text: What other Python web frameworks exist?
+choice4text: 还有更多Python的web框架没有？
 
 
-# Web frameworks
-A web application framework is a code library that make a developer's life
-easier when building reliable, scalable and maintainable web applications.
+# web框架
+web框架就是让开发者可以更简单地构建可靠的、可扩展的、可维护的web应用的代码库。
 
+## 为什么有必要使用web框架
+web框架包含了开发者在过去二十年构建动态web应用中得到的经验教训。框架的使用使得通用HTTP操作的代码复用变得简单，也是组织代码变得更为容易，因此提高了代码的可维护性。
 
-## Why are web frameworks necessary?
-Web frameworks encapsulate what developers have learned over the past twenty
-years while building dynamic web applications. Frameworks make it easier
-to reuse code for common HTTP operations and to structure your code so that 
-it is maintainable.
+## 常见的web框架功能
+框架会通过其本身的代码提供许多功能，也会通过扩展来实现运行一个web应用所需要的常用操作。这些常见的操作包括：
 
+1. URL路由
+2. 提供输出HTML、XML、JSON等等格式的模版
+3. 操作数据库
+4. 提供防范诸如跨站请求伪造（CSRF）等等攻击的手段
 
-## Common web framework functionality
-Frameworks provide functionality in their code or through extensions to 
-perform common operations required to run web applications. These common 
-operations include:
+当然，不是所有web框架都提供上述功能，框架从实现简单的单一用例到包罗万象不一而足，当然对于每个开发者来说复杂度也在提升。一些框架通过“内置电池”的方法来使实现任何功能变得可能，一些则仅仅提供最小化的代码库依靠扩展来实现前者想要实现的功能。
 
-1. URL routing
-2. HTML, XML, JSON, and other output format templating
-3. Database manipulation
-4. Security against Cross-site request forgery (CSRF) and other attacks
+举个例子，Django这个web应用框架内置了一个对象关系映射（ORM）层来抽象关系型数据库的读、写、查询、删除操作。但是，Django的这个ORM层如果不经过大量修改，怕是很难很好的与诸如[MongoDB](http://www.mongodb.org/)这样的非关系型数据库协作。
+一些其他的框架诸如Flask和Pyramid则可以通过导入Python外部库从而更容易的使用非关系型数据库。通常，提供最小化功能而易于扩展的框架和所有功能紧密耦合的框架是框架的两大分野。
 
-Not all web frameworks include code for all of the above 
-functionality. Frameworks fall somewhere between simply executing a 
-single use case and attempting to be everything to every developer with
-increased complexity. Some frameworks take the "batteries-included" approach 
-where everything possible comes bundled with the framework while others 
-have a minimal code library that plays well with extensions.
+## web框架资源概况
+* [Jeff Knupp](https://twitter.com/jeffknupp)写的"[web框架是什么?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)"这篇文章深入地解释了web框架是什么，以及与web服务器的关系。
 
-For example, the Django web application framework includes an 
-Object-Relational Mapping (ORM) layer that abstracts relational database 
-read, write, query, and delete operations. However, Django's ORM
-cannot work without significant modification on non-relational databases such 
-[MongoDB](http://www.mongodb.org/).
-Some other web frameworks such as Flask and Pyramid are easier to
-use with non-relational databases by incorporating external Python libraries.
-There is a spectrum between minimal functionality with easy extensibility and
-including everything in the framework with tight integration.
+* 查看Stack Overflow上关于
+  "[web框架是什么？它相比LAMP怎么样？](http://stackoverflow.com/questions/4507506/what-is-a-web-framework-how-does-it-compare-with-lamp)"这个问题的答案。
 
+* [Python web框架一览](http://www.konstruktor.ee/blog/python-web-framework-roundup/)
+  介绍了包含Django、Flask、Bottle以及一些其他知名度较低的框架。
 
-## General web framework resources
-* "[What is a web framework?](http://www.jeffknupp.com/blog/2014/03/03/what-is-a-web-framework/)"
-  by [Jeff Knupp](https://twitter.com/jeffknupp)
-  is a in-depth explanation of what a web framework is and their relation
-  to web servers.
-
-* Check out the answer to the 
-  "[What is a web framework and how does it compare to LAMP?](http://stackoverflow.com/questions/4507506/what-is-a-web-framework-how-does-it-compare-with-lamp)"
-  question on Stack Overflow.
-
-* This [Python web framework roundup](http://www.konstruktor.ee/blog/python-web-framework-roundup/)
-  covers Django, Flask and Bottle as well as several other lesser known Python
-  frameworks.
-
-
-## Web frameworks learning checklist
+## web框架学习清单
 <i class="fa fa-check-square-o"></i> 
-Choose a major Python web framework ([Django](/django.html) or 
-[Flask](/flask.html) are recommended) and stick with it. When you're just
-starting it's best to learn one framework first instead of bouncing around
-trying to understand every framework. 
+初学框架的时候，选择一个主流的框架 （推荐[Django](/django.html)或者[Flask](/flask.html)）深入学习，而不是企图理解每一种框架的用法。
 
 <i class="fa fa-check-square-o"></i> 
-Work through a detailed tutorial found within the resources links on the
-framework's page.
+去框架的资源链接里找一个复杂详细的教程深入地学习。
 
 <i class="fa fa-check-square-o"></i> 
-Study open source examples built with your framework of choice so you can 
-take parts of those projects and reuse the code in your application.
+去学习一下那些使用你心仪的框架开发出来的开源应用的代码，也许他们的代码也可以用到你的应用中去呢。
 
 <i class="fa fa-check-square-o"></i> 
-Build the first simple iteration of your web application then go to
-the [deployment](/deployment.html) section to make it accessible on the 
-web.
+去写出你的第一个简单的web应用，然后到[部署](/deployment.html)这一节去把它放到网上吧。
 
-
-### Which web framework do you want to learn about?
+### 你想学哪一种web框架呢？
