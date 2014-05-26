@@ -40,16 +40,10 @@
 </div><div class="row">
     <div class="col-md-8">
       <h1>Flask</h1>
-<p><a href="http://flask.pocoo.org/">Flask</a> is a Python web framework built with a 
-<a href="http://flask.pocoo.org/docs/design/">small core and easy-to-extend philosophy</a>. </p>
-<h2>Why is Flask a good web framework choice?</h2>
-<p>Flask is generally considered more 
-<a href="http://stackoverflow.com/questions/58968/what-defines-pythonian-or-pythonic">Pythonic</a> 
-than Django because Flask web application code is by and large more explicit. 
-Flask is easy to get started with as a beginner because there is little 
-boilerplate code for getting a simple app up and running. </p>
-<p>For example, here's a valid "hello world" web application with Flask (the
-equivalent in Django would be significantly more code):</p>
+<p><a href="http://flask.pocoo.org/">Flask</a>是一个以“<a href="http://flask.pocoo.org/docs/design/">核心微小但易于扩展</a>”为核心理念的web框架。</p>
+<h2>为什么Flask是个不错的选择？</h2>
+<p>Flask通常被认为比Django更为<a href="http://stackoverflow.com/questions/58968/what-defines-pythonian-or-pythonic">Python化（Pythonic）</a> ，因为Flask web框架的代码更为明确（译者注：原文because Flask web application code is by and large more explicit.）。另外Flask由于它基本没有固定范例的束缚，新手可以随心所欲的写一个简单的应用来运行。</p>
+<p>举个例子，下面是一个用Flask写的“hello world”应用，相比Django应该要省掉很多代码：</p>
 <div class="highlight"><pre><span class="n">from</span> <span class="n">flask</span> <span class="n">import</span> <span class="n">Flask</span>
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
 
@@ -58,23 +52,14 @@ equivalent in Django would be significantly more code):</p>
     <span class="k">return</span> <span class="err">&#39;</span><span class="n">Hello</span> <span class="n">World</span><span class="o">!</span><span class="err">&#39;</span>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="err">&#39;</span><span class="n">__main__</span><span class="err">&#39;</span><span class="o">:</span>
-<span class="n">app</span><span class="p">.</span><span class="n">run</span><span class="p">()</span>
+    <span class="n">app</span><span class="p">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 
 
-<p>Flask was also written several years after Django and therefore
-learned from the Python community's reactions as the framework evolved.
-Jökull Sólberg wrote a great piece articulating to this effect in his 
-<a href="http://jokull.calepin.co/my-flask-to-django-experience.html">experience switching between Flask and Django</a>.</p>
-<h2>Flask resources</h2>
-<p>The 18-part Flask mega tutorial is an absolutely amazing starting 
-resource for using the Flask framework. Yes, there are a lot of posts in 
-the series. However, each post is focused on a single topic to contain 
-the complexity while the reader is learning the framework. The whole 
-series is well worth an in-depth read-through. The 
-<a href="https://twitter.com/miguelgrinberg">author</a> is also writing the 
-<a href="http://shop.oreilly.com/product/0636920031116.do">O'Reilly Flask Web Development</a>
-book so consider picking that up as well.</p>
+<p>Flask是在Django之后好几年才开发出来的，因此看看随着这个框架的演进，Python社区都有哪些反应呢？
+Jökull Sólberg在 <a href="http://jokull.calepin.co/my-flask-to-django-experience.html">experience switching between Flask and Django</a> 这篇文章中对这方面写的很清楚。</p>
+<h2>Flask资源</h2>
+<p>由18部分组成的这份Flask mega教程对Flask框架初学者来说绝对是极好的资源。诚然，这个系列教程的文章略多，不过每一篇文章都专注于一个单独的主题而且也不失难度，总之整个系列都值得精读一番。另外这个教程的<a href="https://twitter.com/miguelgrinberg">作者</a>也写了一本叫作 <a href="http://shop.oreilly.com/product/0636920031116.do">O'Reilly Flask Web Development</a> 的书，是不是也考虑去买回来读一读呢？［译者注：如下教程已有<a href="http://www.pythondoc.com/flask-mega-tutorial/index.html">中文版</a>，故这里就不做翻译。］</p>
 <ul>
 <li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world">Part 1: Hello World</a></li>
 <li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates">Part 2: Templates</a></li>
@@ -97,90 +82,71 @@ book so consider picking that up as well.</p>
 <p><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xviii-deployment-on-the-heroku-cloud">Part 18: Deployment on the Heroku Cloud</a></p>
 </li>
 <li>
-<p><a href="http://flask.pocoo.org/extensions/">The Flask Extensions Registry</a> is a
-  curated list of the best packages that extend Flask. It's the first location
-  to look through when you're wondering how to do something that's not in the
-  core framework.</p>
+<p><a href="http://flask.pocoo.org/extensions/">Flask扩展列表</a> 提供一份优质的用来扩展Flask功能的包列表。当你觉得使用核心框架不能很好的解决问题时，最好先去看一下这个列表。</p>
 </li>
 <li>
-<p>Randall Degges wrote a detailed walkthrough for 
-  <a href="https://stormpath.com/blog/build-a-flask-app-in-30-minutes/">building a Flask app in 30 minutes</a>.</p>
+<p>Randall Degges 写了一篇叫
+  <a href="https://stormpath.com/blog/build-a-flask-app-in-30-minutes/">30分钟写一个Flask应用</a> 的攻略</p>
 </li>
 <li>
-<p>Nice post by Jeff Knupp on <a href="http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/">Productionizing a Flask App</a>.</p>
+<p>Jeff Knupp 写的 <a href="http://www.jeffknupp.com/blog/2014/01/29/productionizing-a-flask-application/">将Flask投入生产环境</a> 这篇文章也非常好。</p>
 </li>
 <li>
-<p><a href="http://maximebf.com/blog/2012/10/building-websites-in-python-with-flask/#.U06EZ-ZdW4J">Building Websites in Python with Flask</a>
-  is another walkthrough tutorial from first steps through 
-  <a href="http://maximebf.com/blog/2012/11/getting-bigger-with-flask/">getting bigger with Flask</a>.</p>
+<p><a href="http://maximebf.com/blog/2012/10/building-websites-in-python-with-flask/#.U06EZ-ZdW4J">用Flask写一个网站</a> 是一个起步教程，但你的应用变得复杂起来时下面这篇文章可以参考一下。
+  <a href="http://maximebf.com/blog/2012/11/getting-bigger-with-flask/">随着Flask应用的变得复杂</a>。</p>
 </li>
 <li>
-<p>The Plank &amp; Whittle blog has two posts, one on 
-  <a href="http://www.plankandwhittle.com/packaging-a-flask-web-app/">Packaging a Flask web app</a> 
-  and another on 
-  <a href="http://www.plankandwhittle.com/packaging-a-flask-app-in-a-debian-package/">Packaging a Flask app in a Debian package</a>
-  once you've built an app and want to deploy it.</p>
+<p>The Plank &amp; Whittle博客上有两篇文章， 一篇叫 
+  <a href="http://www.plankandwhittle.com/packaging-a-flask-web-app/">打包一个Flask应用</a> ，另一篇叫
+  <a href="http://www.plankandwhittle.com/packaging-a-flask-app-in-a-debian-package/">用Debian包管理系统打包一个Flask应用</a>。当你写好一个Flask应用，部署的时候可能会用到。</p>
 </li>
 <li>
-<p>The Tuts+ <a href="http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822">Flask tutorial</a> 
-  is another great walkthrough for getting started with the framework.</p>
+<p>The Tuts+ 的 <a href="http://code.tutsplus.com/tutorials/an-introduction-to-pythons-flask-framework--net-28822">Flask教程</a> 也是一个Flask起步教程。</p>
 </li>
 <li>
-<p><a href="http://www.realpython.com/blog/python/flask-by-example-part-1-project-setup/">Flask by Example: Part 1</a>
-  shows the basic first steps for setting up a Flask project. 
-  <a href="http://www.realpython.com/blog/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/">Part 2</a> 
-  is also now online that shows how to use PostgreSQL, SQLAlchemy and Alembic.</p>
+<p><a href="http://www.realpython.com/blog/python/flask-by-example-part-1-project-setup/">Flask by Example: 第一部分</a> 展示了开展一个 Flask 项目的基础步骤 ，
+  <a href="http://www.realpython.com/blog/flask-by-example-part-2-postgres-sqlalchemy-and-alembic/">第二部分</a> 展示了如何运用PostgreSQL、SQLAlchemy和Alembic。</p>
 </li>
 <li>
-<p><a href="https://www.digitalocean.com/community/articles/how-to-structure-large-flask-applications">How to Structure Large Flask Applications</a>
-  covers a subject that comes up quickly once you begin adding significant
-  functionality to your Flask application.</p>
+<p><a href="https://www.digitalocean.com/community/articles/how-to-structure-large-flask-applications">如何组织一个Flask应用代码</a> 这篇文章教你如何如何一步一步往你的Flask应用中增加功能而保持代码结构的清晰。</p>
 </li>
 </ul>
-<h2>Open source Flask example projects</h2>
+<h2>使用Flask的开源项目案例</h2>
 <ul>
 <li>
-<p><a href="https://github.com/JackStouffer/Flask-Foundation">Flask Foundation</a> is a
-  starting point for new Flask projects.</p>
+<p><a href="https://github.com/JackStouffer/Flask-Foundation">Flask Foundation</a> 可以作为开展Flask新项目的起点。</p>
 </li>
 <li>
-<p><a href="https://github.com/mjhea0/flaskr-tdd">Flaskr TDD</a> takes the official Flask
-  tutorial and adds test driven development and JQuery to the project. </p>
+<p><a href="https://github.com/mjhea0/flaskr-tdd">Flaskr TDD</a> 以官方教程为基础增加了测试驱动开发和JQuery的内容。</p>
 </li>
 <li>
-<p>Use the <a href="https://github.com/kamalgill/flask-appengine-template">Flask App Engine Template</a>
-  for getting set up on Google App Engine with Flask.</p>
+<p>使用 <a href="https://github.com/kamalgill/flask-appengine-template">Flask App Engine Template</a>
+  在Google App Engine上运行Flask应用。</p>
 </li>
 <li>
-<p>Here is a 
-  <a href="http://charlesleifer.com/blog/saturday-morning-hack-a-little-note-taking-app-with-flask/">note-taking app</a>
-  along with the 
-  <a href="https://gist.github.com/coleifer/632d3c9aa6b2ea519384">source code in Gists</a>.</p>
+<p>这是一个 
+  <a href="http://charlesleifer.com/blog/saturday-morning-hack-a-little-note-taking-app-with-flask/">笔记应用</a>，代码在
+  <a href="https://gist.github.com/coleifer/632d3c9aa6b2ea519384">Gists</a>上。</p>
 </li>
 </ul>
-<h2>Flask framework learning checklist</h2>
+<h2>Flask框架学习清单</h2>
 <p><i class="fa fa-check-square-o"></i> 
-<a href="http://flask.pocoo.org/docs/installation/">Install Flask</a> on
-your local development machine.</p>
+在本地开发环境中<a href="http://flask.pocoo.org/docs/installation/">安装Flask</a></p>
 <p><i class="fa fa-check-square-o"></i> 
-Work through the 18-part Flask tutorial listed first under "Flask resources"
-below.</p>
+将资源部分的系列教程从头到尾做一遍。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Read through <a href="http://flask.pocoo.org/extensions/">Flask Extensions Registry</a>
-to find out what extensions you'll need to build your project.</p>
+浏览一遍<a href="http://flask.pocoo.org/extensions/">Flask Extensions Registry</a>看看哪些扩展能用于你的项目。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Start coding your Flask app based on what you learned from the 18 part
-Flask tutorial plus open source example applications found below. </p>
+基于Flask mega教程和其他开源例子，去写一个自己的Flask应用。 </p>
 <p><i class="fa fa-check-square-o"></i> 
-Move on to the <a href="/deployment.html">deployment section</a> to get your initial 
-Flask project on the web.</p>
-<h3>What do you need to learn about web frameworks next?</h3>
+移步 <a href="/deployment.html">部署小节</a> 把你的第一个Flask应用发布到网上。</p>
+<h3>关于web框架的知识，接下来你想学点什么呢？</h3>
 <div class="row">
     <div class="col-md-3">
         <div class="well select-next">
             <a href="/deployment.html" class="btn btn-success btn-full"><i class="fa fa-share fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How do I deploy Flask web application when it's ready to go live?
+                我已经用Flask写好一个web应用了，怎么部署呢？
             </p>
         </div>
     </div>
@@ -189,7 +155,7 @@ Flask project on the web.</p>
             <a href="/web-frameworks.html" class="btn btn-success btn-full"><i class="fa fa-code fa-inverse fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                I'd like to go back to reviewing other web frameworks.
+                我想回头看看其他的web框架。
             </p>
         </div>
     </div>
@@ -197,7 +163,7 @@ Flask project on the web.</p>
         <div class="well select-next">
             <a href="/cascading-style-sheets.html" class="btn btn-success btn-full"><i class="fa fa-css3 fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                The user interface looks terrible. How do I style my web app?
+                用户界面非常糟糕，我怎样美化我的web应用呢？
             </p>
         </div>
     </div>
@@ -205,7 +171,7 @@ Flask project on the web.</p>
         <div class="well select-next">
             <a href="/source-control.html" class="btn btn-success btn-full"><i class="fa fa-code-fork fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How can I version and store my source code so I don't lose it?
+                我如何控制、管理我的源代码不使其丢失呢？
             </p>
         </div>
     </div>
