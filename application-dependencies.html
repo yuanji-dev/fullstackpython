@@ -160,6 +160,20 @@ further clarification.</p>
   <a href="http://askubuntu.com/questions/244641/how-to-set-up-and-use-a-virtual-python-environment-in-ubuntu">virtual environment for Python development</a>.</p>
 </li>
 </ul>
+<h2>Application dependencies learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Ensure the libraries your web application depends on are all captured in a
+requirement.txt file with pegged versions. </p>
+<p><i class="fa fa-check-square-o"></i>
+An easy way to capture currently installed dependencies is with the 
+<code>pip freeze</code> command.</p>
+<p><i class="fa fa-check-square-o"></i>
+Create a fresh virtualenv and install the dependencies from your 
+requirements.txt file by using the <code>pip install -r requirements.txt</code> 
+command.</p>
+<p><i class="fa fa-check-square-o"></i>
+Check that your application runs properly with the fresh virtualenv and only
+the installed dependencies from the requirements.txt file.</p>
 <h3>What do you need to learn after installing your app dependencies?</h3>
 <div class="row">
     <div class="col-md-3">
@@ -447,8 +461,9 @@ function mce_success_cb(resp){
               <a href="/no-sql-datastore.html" class="list-group-item smaller-item ">NoSQL Data Stores</a>
               <a href="/cascading-style-sheets.html" class="list-group-item smaller-item ">Cascading Style Sheets</a>
               <a href="/javascript.html" class="list-group-item smaller-item ">JavaScript</a>
-              <a href="/application-programming-intefaces.html" class="list-group-item smaller-item ">Application Programming Interfaces</a>
+              <a href="/application-programming-interfaces.html" class="list-group-item smaller-item ">Application Programming Interfaces</a>
               <a href="/api-integration.html" class="list-group-item smaller-item ">API Integration</a>
+              <a href="/api-creation.html" class="list-group-item smaller-item ">API Creation</a>
               <a href="/static-content.html" class="list-group-item smaller-item ">Static Content</a>
               <a href="/caching.html" class="list-group-item smaller-item ">Caching</a>
               <a href="/task-queues.html" class="list-group-item smaller-item ">Task Queues</a>

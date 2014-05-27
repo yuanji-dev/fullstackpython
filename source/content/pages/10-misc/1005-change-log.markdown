@@ -24,7 +24,9 @@ the
 
 ## 2014
 ### May
-* Added learning checklist for source control.
+* Updated APIs page with basic information on webhooks.
+* Added learning checklist for source control, application dependencies,
+  configuration management, NoSQL data stores and APIs.
 * Moving learning checklists to the bottom of the pages since they are 
   specific advice for steps to take after reading a section.
 * Added a stub section for APIs.

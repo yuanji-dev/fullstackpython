@@ -6,7 +6,7 @@
     <meta name="author" content="Matt Makai">
     <meta name="description" content="Full Stack Python explains each layer of the web application stack, from the server up through the rendering in a user's browser.">
     <link rel="shortcut icon" href="theme/img/fsp-fav.png">
-    <title>Monitoring - Full Stack Python</title>
+    <title>Application Programming Interfaces - Full Stack Python</title>
     <link href="theme/css/fsp.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -39,172 +39,81 @@
     </div>
 </div><div class="row">
     <div class="col-md-8">
-      <h1>Monitoring</h1>
-<p>Monitoring tools capture, analyze and display information for a web 
-application's execution. Every application has issues arise throughout
-all levels of the web stack. Monitoring tools provide transparency so
-developers and operations teams can respond and fix problems.</p>
-<h2>Why is monitoring necessary?</h2>
-<p>Capturing and analyzing data about your production environment is critical
-to proactively deal with stability, performance, and errors in a web 
-application.</p>
-<h2>Monitoring layers</h2>
-<p>There are several important resources to monitor on the operating system 
-and network level of a web stack.</p>
-<ol>
-<li>CPU utilization</li>
-<li>Memory utilization</li>
-<li>Persistence storage consumed versus free</li>
-<li>Network bandwidth and latency</li>
-</ol>
-<p>Application level monitoring encompasses several aspects. The amount of time
-and resources dedicated to each aspect will vary based on whether an 
-application is read-heavy, write-heavy, or subject to rapid swings in traffic.</p>
-<ol>
-<li>Application warnings and errors (500-level HTTP errors)</li>
-<li>Application code performance</li>
-<li>Template rendering time</li>
-<li>Browser rendering time for the application</li>
-<li>Database querying performance</li>
-</ol>
-<h2>Monitoring Third Party Services</h2>
+      <h1>Application Programming Interfaces</h1>
+<p>Application programming interfaces (APIs) provide machine-readable
+data transfer and signaling between applications.</p>
+<h2>Why are APIs important?</h2>
+<p>HTML, CSS and JavaScript create human-readable webpages. However, those 
+webpages are not easily consumable by other machines. Numerous scraping
+programs and libraries exist to rip data out of HTML but it's simpler
+to consume data through APIs.</p>
+<h2>Webhooks</h2>
+<p>A webhook is a user-defined HTTP callback to a URL that executes when a 
+system condition is met. The call alerts the second system via a POST or GET
+request and often passes data as well.</p>
+<p>Webhooks are important because they enable two-way communication initiation 
+for APIs. Webhook flexibility comes in from their definition by the API user
+instead of the API itself.</p>
+<p>For example, in the <a href="https://www.twilio.com/api">Twilio API</a> when a text 
+message is sent to a Twilio phone number Twilio sends an HTTP POST request 
+webhook to the URL specified by the user. The URL is defined in a text box
+on the number's page on Twilio as shown below.</p>
+<p><img src="theme/img/twilio-webhook-definition.jpg" width="100%" alt="Webhook definition in the Twilio API." class="technical-diagram" /></p>
+<h2>API open source projects</h2>
 <ul>
-<li>
-<p><a href="http://newrelic.com/">New Relic</a>. Application and database monitoring as
-  well as plug ins for capturing and analyzing additional data about tools in
-  your stack.</p>
-</li>
-<li>
-<p><a href="http://copperegg.com/">CopperEgg</a> is lower-level monitoring on server and 
-  infrastructure. It's popular with DevOps shops that are making changes to
-  their production environments and want immediate feedback on the results
-  of those modifications.</p>
-</li>
-<li>
-<p><a href="http://status.io/">Status.io</a> focuses on uptime and response metrics 
-  transparency for web applications.</p>
-</li>
-<li>
-<p><a href="https://www.statuspage.io/">StatusPage.io</a> (yes, there's both a Status and
-  StatusPage.io) provides easy set up status pages for monitoring application
-  up time.</p>
-</li>
-<li>
-<p><a href="http://www.pagerduty.com/">PagerDuty</a> alerts a designated person or group
-  if there are stability, performance, or uptime issues with an application.</p>
-</li>
+<li><a href="https://github.com/wordnik/swagger-core">Swagger</a> is an open source project 
+  written in Scala that defines a standard interface for RESTful APIs.</li>
 </ul>
-<h2>Open source monitoring projects</h2>
+<h2>API resources</h2>
 <ul>
-<li>
-<p><a href="https://github.com/etsy/statsd/">statsd</a> is a node.js network daemon that
-  listens for metrics and aggregates them for transfer into another service
-  such as Graphite.</p>
-</li>
-<li>
-<p><a href="https://graphite.readthedocs.org/en/latest/overview.html">Graphite</a> stores
-  time-series data and displays them in graphs through a Django web application.</p>
-</li>
-<li>
-<p><a href="http://github.hubspot.com/bucky/">Bucky</a> measures the performance of a
-  web application from end user's browsers and sends that data back to the
-  server for collection.</p>
-</li>
-<li>
-<p><a href="http://sensuapp.org/">Sensu</a> is an open source monitoring framework
-  written in Ruby but applicable to any programming language web application.</p>
-</li>
-<li>
-<p><a href="http://vimeo.github.io/graph-explorer/">Graph Explorer</a> by Vimeo is a
-  Graphite-based dashboard with added features and a slick design.</p>
-</li>
-<li>
-<p><a href="http://packetbeat.com/">PacketBeat</a> sniffs protocol packets. Elasticsearch
-  then allows developers to search the collected data and visualize what's 
-  happening inside their web application using the Kibana user interface.</p>
-</li>
-<li>
-<p><a href="http://munin-monitoring.org/">Munin</a> is a client plugin-based monitoring 
-  system that sends monitoring traffic to the Munin node where the data can
-  be analyzed and visualized. Note this project is written in Perl so Perl 5
-  must be installed on the node collecting the data.</p>
-</li>
+<li><a href="https://zapier.com/">Zapier</a> has an
+  <a href="https://zapier.com/blog/apis-101/">APIs 101</a> free guide for what APIs 
+  are, why they are valuable and how to use them properly. </li>
 </ul>
-<h2>Monitoring resources</h2>
-<ul>
-<li>
-<p><a href="http://www.paperplanes.de/2011/1/5/the_virtues_of_monitoring.html">The Virtues of Monitoring</a></p>
-</li>
-<li>
-<p><a href="http://blog.docker.io/2013/07/effortless-monitoring-with-collectd-graphite-and-docker/">Effortless Monitoring with collectd, Graphite, and Docker</a></p>
-</li>
-<li>
-<p><a href="http://matt.aimonetti.net/posts/2013/06/26/practical-guide-to-graphite-monitoring/">Practical Guide to StatsD/Graphite Monitoring</a> 
-  is a detailed guide with code examples for monitoring infrastructure.</p>
-</li>
-<li>
-<p>Bit.ly describes the 
-  "<a href="http://word.bitly.com/post/74839060954/ten-things-to-monitor">10 Things They Forgot to Monitor</a>"
-  beyond the standard metrics such as disk &amp; memory usage.</p>
-</li>
-<li>
-<p><a href="http://aarvik.dk/four-linux-server-monitoring-and-management-tools/">Four Linux server monitoring tools</a></p>
-</li>
-<li>
-<p><a href="https://blog.serverdensity.com/how-to-design-useful-monitoring-graphs-and-visualizations/">How to design useful monitoring and graphing visualizations</a></p>
-</li>
-<li>
-<p>The Collector Highlight Series has an article on <a href="http://blog.librato.com/posts/statsd">StatsD</a>
-  that explains how to install it and how it works.</p>
-</li>
-</ul>
-<h2>Monitoring learning checklist</h2>
-<p><i class="fa fa-check-square-o"></i>
-Review the software-as-a-service and open source monitoring tools below. Third
-party services tend to be easier to set up and host the data for you. Open
-source projects give you more control but you'll need to have additional 
-servers ready for the monitoring.</p>
-<p><i class="fa fa-check-square-o"></i>
-My recommendation is to install <a href="http://newrelic.com/">New Relic</a>'s free 
-option with the trial period to see how it works with your app. It'll give you
-a good idea of the capabilities for application-level monitoring tools.</p>
-<p><i class="fa fa-check-square-o"></i>
-As your app scales take a look at setting up one of the the open source 
-monitoring projects such as StatsD with Graphite. The combination of those
-two projects will give you fine-grained control over the system metrics 
-you're collecting and visualizing.</p>
-<h3>What topic do you want to learn next?</h3>
+<h2>CSS learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i> 
+Learn the API concepts of machine-to-machine communication with JSON and XML,
+endpoints and webhooks.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Integrate an API such as Twilio or Stripe into your web application. Read the
+<a href="/api-integration.html">API integration</a> section for more information.</p>
+<p><i class="fa fa-check-square-o"></i> 
+Use a framework to create an API for your own application. </p>
+<p><i class="fa fa-check-square-o"></i> 
+Expose your web application's API so other applications can consume data you
+want to share.</p>
+<h3>What's next after learning about APIs?</h3>
 <div class="row">
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/web-analytics.html" class="btn btn-success btn-full"><i class="fa fa-dashboard fa-2x"></i></a>
+            <a href="/api-integration.html" class="btn btn-success btn-full"><i class="fa fa-link fa-2x"></i></a>
             <p class="under-btn">
-                How do I learn more about the users of my app with web analytics?
+                How do I integrate external APIs into my application?
+            </p>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="well select-next">
+            <a href="/task-queues.html" class="btn btn-success btn-full"><i class="fa fa-tasks fa-2x"></i></a>
+            </a>
+            <p class="under-btn">
+                How can I invoke APIs outside the HTTP request-response cycle?
             </p>
         </div>
     </div>
     <div class="col-md-3">
         <div class="well select-next">
             <a href="/web-application-security.html" class="btn btn-success btn-full"><i class="fa fa-lock fa-inverse fa-2x"></i></a>
-            </a>
             <p class="under-btn">
-                What should I learn about web application security?
+                Where can I learn about web application security?
             </p>
         </div>
     </div>
     <div class="col-md-3">
         <div class="well select-next">
-            <a href="/configuration-management.html" class="btn btn-success btn-full"><i class="fa fa-gears fa-inverse fa-2x"></i></a>
+            <a href="/api-creation.html" class="btn btn-success btn-full"><i class="fa fa-cubes fa-2x"></i></a>
             <p class="under-btn">
-                How do I automate the server configuration I've set up?
-            </p>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="well select-next">
-            <a href="/logging.html" class="btn btn-success btn-full"><i class="fa fa-align-left fa-inverse fa-2x"></i></a>
-            <p class="under-btn">
-                How should I log events in my application outside monitoring?
+                How do I create an API for my own web application?
             </p>
         </div>
     </div>
@@ -427,7 +336,7 @@ function mce_success_cb(resp){
 <!--End mc_embed_signup-->     </div>
 <div class="col-md-offset-1 col-md-3" id="sidebar">
   <div class="panel panel-success">
-      <div class="panel-heading"><h3 class="panel-head">Monitoring</h3></div>
+      <div class="panel-heading"><h3 class="panel-head">Application Programming Interfaces</h3></div>
       <div class="panel-body">
           <a href="/">Full Stack Python</a>是一本解释Python web应用栈层，并为之提供最好的网络资源的开放书籍。
           <hr/>
@@ -460,14 +369,14 @@ function mce_success_cb(resp){
               <a href="/no-sql-datastore.html" class="list-group-item smaller-item ">NoSQL Data Stores</a>
               <a href="/cascading-style-sheets.html" class="list-group-item smaller-item ">Cascading Style Sheets</a>
               <a href="/javascript.html" class="list-group-item smaller-item ">JavaScript</a>
-              <a href="/application-programming-interfaces.html" class="list-group-item smaller-item ">Application Programming Interfaces</a>
+              <a href="/application-programming-interfaces.html" class="list-group-item smaller-item active">Application Programming Interfaces</a>
               <a href="/api-integration.html" class="list-group-item smaller-item ">API Integration</a>
               <a href="/api-creation.html" class="list-group-item smaller-item ">API Creation</a>
               <a href="/static-content.html" class="list-group-item smaller-item ">Static Content</a>
               <a href="/caching.html" class="list-group-item smaller-item ">Caching</a>
               <a href="/task-queues.html" class="list-group-item smaller-item ">Task Queues</a>
               <a href="/logging.html" class="list-group-item smaller-item ">Logging</a>
-              <a href="/monitoring.html" class="list-group-item smaller-item active">Monitoring</a>
+              <a href="/monitoring.html" class="list-group-item smaller-item ">Monitoring</a>
               <a href="/web-analytics.html" class="list-group-item smaller-item ">Web Analytics</a>
               <a href="/web-application-security.html" class="list-group-item smaller-item ">Web Application Security</a>
               <a href="/best-python-resources.html" class="list-group-item smaller-item ">Best Python Resources</a>
