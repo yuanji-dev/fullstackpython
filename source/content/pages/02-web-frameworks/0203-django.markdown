@@ -96,6 +96,9 @@ Django项目的稳定、性能、社区自其诞生的十年来取得了极大�
   app that allows audiences to text in during a presentation with feedback
   or questions.
 
+* [Openduty](https://github.com/ustream/openduty) is a website status checking
+  and alert system similar to PagerDuty.
+
 
 ## Django学习清单
 <i class="fa fa-check-square-o"></i> 

@@ -12,18 +12,17 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-19910497-7']);
-  _gaq.push(['_trackPageview']);
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-    </script>
-  </head>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css" rel="stylesheet">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50840195-2', 'gimo.me');
+  ga('send', 'pageview');
+
+</script>  </head>
 
 <body>
     <a href="https://github.com/masakichi/fullstackpython" class="github">
@@ -40,45 +39,24 @@
 </div><div class="row">
     <div class="col-md-8">
       <h1>Django</h1>
-<p><a href="http://www.djangoproject.com/">Django</a> is a widely used Python web 
-application framework with a "batteries-included" philosophy. The principle
-behind batteries-included is that the common functionality for building
-web applications should come with the framework instead of as separate
-libraries. </p>
+<p><a href="http://www.djangoproject.com/">Django</a>是一个以“内置电池”为设计哲学的被广泛使用的Python web应用框架。“内置电池”的原则即是构建web应用的常见功能应该包含在框架之内，而不是依赖单独的外部库。</p>
 <p><img src="theme/img/django-logo-positive.png" width="100%" alt="Official Django logo. Trademark Django Software Foundation." class="technical-diagram" /></p>
-<p>For example, 
-<a href="https://docs.djangoproject.com/en/dev/topics/auth/">authentication</a>,
-<a href="https://docs.djangoproject.com/en/dev/topics/http/urls/">URL routing</a>, a 
-<a href="https://docs.djangoproject.com/en/dev/topics/templates/">templating system</a>,
-an <a href="https://docs.djangoproject.com/en/dev/topics/db/">object-relational mapper</a>,
-and <a href="https://docs.djangoproject.com/en/dev/topics/migrations/">database schema migrations</a>
-(as of version 1.7) are all included with the <a href="https://pypi.python.org/pypi/Django/1.6.2">Django framework</a>. 
-Compare that included functionality to the Flask framework which requires a 
-separate library such as 
-<a href="https://flask-login.readthedocs.org/en/latest/">Flask-Login</a>
-to perform user authentication. </p>
-<p>The batteries-included and extensibility philosophies are simply two different 
-ways to tackle framework building.  Neither philosophy is inherently better 
-than the other.</p>
-<h2>Why is Django a good web framework choice?</h2>
-<p>The Django project's stability, performance and community have grown 
-tremendously over the past decade since the framework's creation. Detailed
-tutorials and best practices are readily available on the web and in books.
-The framework continues to add significant new functionality such as 
-<a href="https://docs.djangoproject.com/en/dev/topics/migrations/">database migrations</a>
-with each release. </p>
-<p>I highly recommend the Django framework as a starting place for new Python web 
-developers because the official documentation and tutorials are some of the 
-best anywhere in software development. Many cities also have Django-specific
-groups such as <a href="http://www.meetup.com/django-district/">Django District</a>,
-<a href="http://www.meetup.com/djangoboston/">Django Boston</a> and 
-<a href="http://www.meetup.com/The-San-Francisco-Django-Meetup-Group/">San Francisco Django</a> 
-so new developers can get help when they are stuck.</p>
-<p>There's some debate on whether 
-<a href="http://www.jeffknupp.com/blog/2012/12/11/learning-python-via-django-considered-harmful/">learning Python by using Django is a bad idea</a>. 
-However, that criticism is invalid if you take the time to learn the Python
-syntax and language semantics first before diving into web development.</p>
-<h2>Django resources</h2>
+<p>举个例子，
+<a href="https://docs.djangoproject.com/en/dev/topics/auth/">用户认证</a>、
+<a href="https://docs.djangoproject.com/en/dev/topics/http/urls/">URL路由</a>、
+<a href="https://docs.djangoproject.com/en/dev/topics/templates/">模版系统</a>、
+<a href="https://docs.djangoproject.com/en/dev/topics/db/">对象关系映射ORM</a>和
+<a href="https://docs.djangoproject.com/en/dev/topics/migrations/">数据库迁移</a>
+(1.7版本引进)都包含在<a href="https://pypi.python.org/pypi/Django/1.6.2">Django框架</a>中。试着比较一下自带用户认证功能的Django框架和依赖外部库如 <a href="https://flask-login.readthedocs.org/en/latest/">Flask-Login</a> 实现的Flask框架。</p>
+<p>在框架本身的构建中，“内置电池”和“可扩展”这两种哲学显然大相径庭，不过这两种内在哲学并没有哪个好哪个不好。</p>
+<h2>为什么Django是个不错的选择？</h2>
+<p>Django项目的稳定、性能、社区自其诞生的十年来取得了极大的成长。不管是书中还是在网上很容易就能获取到详尽的教程和最佳实践（best practices），并且随着新版本的释出，很多有意义的新功能如<a href="https://docs.djangoproject.com/en/dev/topics/migrations/">数据库迁移</a>还在继续加入到框架中去。</p>
+<p>我强烈推荐Python web开发新手们以Django作为起点，因为在软件开发的过程中官方提供的文档和教程都是一些精品资源。另外许多城市都有专门的Django团体，诸如<a href="http://www.meetup.com/django-district/">Django District</a>,
+<a href="http://www.meetup.com/djangoboston/">Django Boston</a> 和 
+<a href="http://www.meetup.com/The-San-Francisco-Django-Meetup-Group/">San Francisco Django</a>， 
+许多新手开发者在遇到问题时可以在那里得到帮助。［译者注：中文社区］</p>
+<p>另外有一个争论点是：有人认为<a href="http://www.jeffknupp.com/blog/2012/12/11/learning-python-via-django-considered-harmful/">通过Django来学习Python是个坏主意</a>。不过，在你投入到web开发之前你已经花时间学习了Python的语法、语义的话，这些批评的声音就大可不以为意了。</p>
+<h2>Django资源</h2>
 <ul>
 <li>
 <p><a href="http://www.tangowithdjango.com/book/">Tango with Django</a> are a extensive 
@@ -118,15 +96,13 @@ syntax and language semantics first before diving into web development.</p>
   and optimizing based on the measured results.</p>
 </li>
 </ul>
-<h2>Django videos</h2>
+<h2>Django视频</h2>
 <ul>
 <li>
-<p><a href="https://godjango.com/">GoDjango</a> screencasts and tutorials are free short
-  videos for learning how to build Django applications.</p>
+<p><a href="https://godjango.com/">GoDjango</a> 提供怎样构建Django应用的免费短视频教程。</p>
 </li>
 <li>
-<p>Ontwik has learning videos in its 
-  <a href="http://ontwik.com/category/django/">Django category</a>.</p>
+<p>Ontwik在 <a href="http://ontwik.com/category/django/">Django分类</a> 有视频教程。</p>
 </li>
 <li>
 <p><a href="http://pyvideo.org/video/2630/designing-djangos-migrations">Designing Django's Migrations</a>
@@ -141,41 +117,39 @@ syntax and language semantics first before diving into web development.</p>
   all available free of charge.</p>
 </li>
 </ul>
-<h2>Open source Django example projects</h2>
+<h2>使用Django的开源项目案例</h2>
 <ul>
-<li><a href="https://github.com/makaimc/txt2react">Txt 2 React</a> is a full Django web
+<li>
+<p><a href="https://github.com/makaimc/txt2react">Txt 2 React</a> is a full Django web
   app that allows audiences to text in during a presentation with feedback
-  or questions.</li>
+  or questions.</p>
+</li>
+<li>
+<p><a href="https://github.com/ustream/openduty">Openduty</a> is a website status checking
+  and alert system similar to PagerDuty.</p>
+</li>
 </ul>
-<h2>Django learning checklist</h2>
+<h2>Django学习清单</h2>
 <p><i class="fa fa-check-square-o"></i> 
-<a href="https://docs.djangoproject.com/en/dev/topics/install/">Install Django</a> on
-your local development machine.</p>
+在你的本地开发环境中<a href="https://docs.djangoproject.com/en/dev/topics/install/">安装Django</a></p>
 <p><i class="fa fa-check-square-o"></i> 
-Work through the initial 
-<a href="https://docs.djangoproject.com/en/dev/intro/tutorial01/">"polls" tutorial</a>.</p>
+将Django的第一个 
+<a href="https://docs.djangoproject.com/en/dev/intro/tutorial01/">"投票"教程</a> 从头到尾做一遍。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Build a few more simple applications using the tutorial resources found
-in the "Django resources" section.</p>
+借助教程和上面的Django资源做一个稍稍复杂的应用。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Start coding your own Django project with help from the 
-<a href="https://docs.djangoproject.com/en/dev/">official documentation</a> and 
-resource links below. You'll make plenty of mistakes which is critical
-on your path to learning the right way to build applications.</p>
+在 <a href="https://docs.djangoproject.com/en/dev/">官方文档</a> 和上面提到的资源链接的帮助下开始自己的Django项目之旅。你可能会遇到不少挫折，不过这些对你通往正确的应用开发之路来说是至关重要的。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Read <a href="http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/098146730X/ref=sr_1_2?ie=UTF8&amp;qid=1391562062&amp;sr=8-2&amp;tag=mlinar-20">2 Scoops of Django</a> 
-to understand Django best practices and learn better ways of building 
-Django web applications.</p>
+阅读 <a href="http://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/098146730X/ref=sr_1_2?ie=UTF8&amp;qid=1391562062&amp;sr=8-2&amp;tag=mlinar-20">2 Scoops of Django</a> 这本书理解Django的最佳实践并学会用更好的方式来构建Django web应用。</p>
 <p><i class="fa fa-check-square-o"></i> 
-Move on to the <a href="/deployment.html">deployment section</a> to get your Django 
-project on the web.</p>
-<h3>What do you need to learn next for your Django app?</h3>
+移步 <a href="/deployment.html">部署小节</a> 把你的Django应用发布到网上。</p>
+<h3>看看自己写的Django应用，接下来你想学点什么呢？</h3>
 <div class="row">
     <div class="col-md-3">
         <div class="well select-next">
             <a href="/cascading-style-sheets.html" class="btn btn-success btn-full"><i class="fa fa-css3 fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                My user interface looks terrible. How do I style a web application?
+                用户界面非常糟糕，我怎样美化我的web应用呢？
             </p>
         </div>
     </div>
@@ -184,7 +158,7 @@ project on the web.</p>
             <a href="/api-integration.html" class="btn btn-success btn-full"><i class="fa fa-link fa-inverse fa-2x"></i></a>
             </a>
             <p class="under-btn">
-                I want to integrate external APIs into my Django project.
+                我想将外部的API整合进我的Django项目。
             </p>
         </div>
     </div>
@@ -192,7 +166,7 @@ project on the web.</p>
         <div class="well select-next">
             <a href="/deployment.html" class="btn btn-success btn-full"><i class="fa fa-share fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How do I deploy a Django web app once it's coded?
+                我已经用Flask写好一个web应用了，怎么部署呢？
             </p>
         </div>
     </div>
@@ -200,7 +174,7 @@ project on the web.</p>
         <div class="well select-next">
             <a href="/source-control.html" class="btn btn-success btn-full"><i class="fa fa-code-fork fa-inverse fa-2x"></i></a>
             <p class="under-btn">
-                How can I version and store my source code so I don't lose it?
+                我如何控制、管理我的源代码不使其丢失呢？
             </p>
         </div>
     </div>
@@ -427,7 +401,11 @@ function mce_success_cb(resp){
       <div class="panel-body">
           <a href="/">Full Stack Python</a>是一本解释Python web应用栈层，并为之提供最好的网络资源的开放书籍。
           <hr/>
-          <a href="http://twitter.com/mattmakai">Matt Makai</a> 先生在社区的协助下设计并编写了这个站点。如果你有Github账号，可以
+          Need more detailed tutorials and walkthroughs than what is
+          presented here? 
+          <a href="/email.html">Sign up for an email alert when that content is created.</a>
+          <hr/>
+            <a href="http://twitter.com/mattmakai">Matt Makai</a> 先生在社区的协助下设计并编写了这个站点。如果你有Github账号，可以
           <a href="https://github.com/makaimc">follow</a>他哦。想跟近这本书的最新状态去Github
           <a href="https://github.com/makaimc/fullstackpython.github.com">Star</a> 这个项目吧！
       </div>
@@ -480,5 +458,10 @@ function mce_success_cb(resp){
             2014
         </div>
     </div>
-</body>
+<script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0016/5846.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script></body>
 </html>
