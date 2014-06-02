@@ -23,11 +23,16 @@ the
 [source repository's commit log](https://github.com/makaimc/fullstackpython.github.com/commits/gh-pages) on GitHub.
 
 ## 2014
+### June
+* Updated logging page with better explanations and content ordering.
+* Added learning checklists for all sections. The remaining sections that now
+  also have checklists are logging, web analytics and web application security.
+
 ### May
 * Added link to my O'Reilly Programming blog post on demand for full stack 
   developer capabilities.
 * Updated APIs page with basic information on webhooks.
-* Added learning checklist for source control, application dependencies,
+* Added learning checklists for source control, application dependencies,
   configuration management, NoSQL data stores, APIs, API integration, 
   API creation, static content and caching sections.
 * Moving learning checklists to the bottom of the pages since they are 

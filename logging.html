@@ -39,11 +39,14 @@
 </div><div class="row">
     <div class="col-md-8">
       <h1>Logging</h1>
-<p>Logging is a mechanism for monitoring web applications written with a
-web framework. Runtime exceptions that prevent code from running are 
-important to log to investigate and fix the source of the problems. 
-Informational and debugging logging also helps to understand how the 
-application is performing even if code is working as intended.</p>
+<p>Logging saves output such as errors, warnings and event information to 
+files for debugging purposes. </p>
+<h2>Why is logging important?</h2>
+<p>Runtime exceptions that prevent code from running are important to log to 
+investigate and fix the source of the problems. Informational and debugging 
+logging also helps to understand how the application is performing even if 
+code is working as intended.</p>
+<h2>Logging levels</h2>
 <p>Logging is often grouped into several categories:</p>
 <ol>
 <li>Information</li>
@@ -52,15 +55,7 @@ application is performing even if code is working as intended.</p>
 <li>Error</li>
 </ol>
 <p>Logging errors that occur while a web framework is running is crucial to
-understanding how your application is performing. 
-<a href="http://raven.readthedocs.org/en/latest/">Raven</a> is a Python client for the
-<a href="https://github.com/getsentry/sentry">Sentry</a> exception logging and 
-aggregation application. Raven provides the way to send exceptions to
-Sentry, which should be deployed on a separate server from your production
-infrastructure. Raven can also be used by Python scripts to send other
-log data to Sentry for aggregation. Sentry provides a clean web application
-interface for viewing the exceptions. Sentry can also be configured with a
-mail plugin to send emails when exceptions occur.</p>
+understanding how your application is performing. </p>
 <h2>Logging Aggregators</h2>
 <p>When you are running your application on several servers, it is helpful
 to have a monitoring tool called a "logging aggregator". You can configure 
@@ -70,29 +65,15 @@ across your cluster. </p>
 <p>Another advantage of log aggregatortion tools is they allow you to set up 
 custom alerts and alarms so you can get notified when error rates breach a 
 certain threshold.</p>
-<h3>Log Aggregator Third Party Services</h3>
-<ul>
-<li>
-<p><a href="https://www.loggly.com/">loggly</a> Loggly is a third party cloud based 
-  application that aggregates logs. They have instructions for every major 
-  language, including python. It includes email alerting on custom searches. </p>
-</li>
-<li>
-<p><a href="https://papertrailapp.com/">papertrail</a> Paper trail is similar to both 
-  loggly and splunk and provides integration with S3 for long term storage.</p>
-</li>
-<li>
-<p><a href="http://www.splunk.com/">splunk</a> Splunk offers third party cloud and self 
-  hosted solutions for event aggregation. It excells at searching and data 
-  mining any text based data. </p>
-</li>
-<li>
-<p><a href="http://raygun.io/">Raygun</a> logs errors and provides immediate notification
-  when issues arise.</p>
-</li>
-</ul>
 <h3>Open Source Log Aggregators</h3>
 <ul>
+<li>
+<p><a href="http://raven.readthedocs.org/en/latest/">Raven</a> is a Python client for the
+  <a href="https://github.com/getsentry/sentry">Sentry</a> exception logging and 
+  aggregation application. Raven can also be used by Python scripts to send 
+  other log data to Sentry for aggregation. Sentry provides a clean web 
+  application interface for viewing the exceptions. </p>
+</li>
 <li>
 <p><a href="http://graylog2.org/">Graylog2</a> provides a central server for log 
   aggregation as well as a GUI for browsing and searching through log events. 
@@ -108,6 +89,31 @@ certain threshold.</p>
   to aggregate logs. It's designed to run on multiple servers and scale with 
   the rest of your cluster. Uses the Thrift messagaing format so it can be 
   used with any language. </p>
+</li>
+</ul>
+<h3>Hosted Log Aggregator Services</h3>
+<ul>
+<li>
+<p><a href="https://www.loggly.com/">Loggly</a> Loggly is a third party cloud based 
+  application that aggregates logs. They have instructions for every major 
+  language, including python. It includes email alerting on custom searches. </p>
+</li>
+<li>
+<p><a href="https://papertrailapp.com/">Papertrail</a> Paper trail is similar to both 
+  loggly and splunk and provides integration with S3 for long term storage.</p>
+</li>
+<li>
+<p><a href="http://www.splunk.com/">Splunk</a> Splunk offers third party cloud and self 
+  hosted solutions for event aggregation. It excells at searching and data 
+  mining any text based data. </p>
+</li>
+<li>
+<p><a href="http://raygun.io/">Raygun</a> logs errors and provides immediate notification
+  when issues arise.</p>
+</li>
+<li>
+<p><a href="https://www.scalyr.com/">Scalyr</a> provides log aggregation, dashboards,
+  alerts and search in a user interface on top of standard logs.</p>
 </li>
 </ul>
 <h2>Logging resources</h2>
@@ -137,6 +143,18 @@ certain threshold.</p>
   <a href="http://www.caktusgroup.com/blog/2013/09/18/central-logging-django-graylog2-and-graypy/">central logging with graypy and Graylog2</a>.</p>
 </li>
 </ul>
+<h2>Logging learning checklist</h2>
+<p><i class="fa fa-check-square-o"></i>
+Read how to integrate logging into your web application framework. </p>
+<p><i class="fa fa-check-square-o"></i>
+Ensure errors and anomalous results are logged. While these logs can be stored 
+in <a href="/monitoring.html">monitoring</a> solutions, it's best to have your own log
+storage location to debug issues as they arise to complement other monitoring 
+systems.</p>
+<p><i class="fa fa-check-square-o"></i>
+Integrate logging for system events you may need to use for debugging purposes
+later. For example, you may want to know the return values on functions when
+they are above a certain threshold. </p>
 <h3>Logging isn't enough. How do I analyze more data about the app?</h3>
 <div class="row">
     <div class="col-md-4">
