@@ -51,6 +51,14 @@ back. Developers can merge changes with other developer's code through
 a necessity regardless of time size or the programming ecosystem used. Every
 project should immediately begin by using a version control system such
 as Git or Mercurial.</p>
+<p><img src="theme/img/app-source-control.png" width="100%" class="technical-diagram" alt="App deployment uses a server to pull from the source control system."></p>
+<p>Pulling code during a deployment is One way source control systems can fit 
+into the deployment process. </p>
+<p>Note that some developers recommend deployment pipelines package the source 
+code to deploy it and never have a production environment touch a source 
+control system directly. However, for small scale deployments it's often
+easiest to pull from source code when you're getting started instead of 
+figuring out how to wrap the Python code in a system installation package.</p>
 <h2>Source control systems</h2>
 <ul>
 <li>
@@ -77,13 +85,15 @@ as Git or Mercurial.</p>
 <h2>Source control resources</h2>
 <ul>
 <li>
-<p><a href="http://git-scm.com/book">Pro Git</a> is a free open source book that walks 
-  through all aspects of using the version control system.</p>
-</li>
-<li>
 <p><a href="http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/">Staging Servers, Source Control &amp; Deploy Workflows, And Other Stuff Nobody Teaches You</a> 
   is a comprehensive overview by Patrick McKenzie of why you need source 
   control.</p>
+</li>
+<li>
+<p><a href="https://blog.rainforestqa.com/2014-05-28-version-control-best-practices/">Version control best practices</a>
+  is a good write up of how to work with version control systems. The post is 
+  part of an ongoing deployment guide written by the folks at 
+  <a href="https://www.rainforestqa.com/">Rainforest</a>.</p>
 </li>
 <li>
 <p>This lighthearted guide to the 
@@ -106,6 +116,13 @@ as Git or Mercurial.</p>
 <li>
 <p><a href="http://git-scm.com/book/en/Getting-Started-About-Version-Control">About version control</a> 
 reviews the basics of distributed version control systems.</p>
+</li>
+</ul>
+<h2>Git resources</h2>
+<ul>
+<li>
+<p><a href="http://git-scm.com/book">Pro Git</a> is a free open source book that walks 
+  through all aspects of using the version control system.</p>
 </li>
 <li>
 <p><a href="http://wildlyinaccurate.com/a-hackers-guide-to-git">A Hacker's Guide to Git</a>

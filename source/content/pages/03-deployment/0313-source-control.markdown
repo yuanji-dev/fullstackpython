@@ -32,6 +32,17 @@ a necessity regardless of time size or the programming ecosystem used. Every
 project should immediately begin by using a version control system such
 as Git or Mercurial.
 
+<img src="theme/img/app-source-control.png" width="100%" class="technical-diagram" alt="App deployment uses a server to pull from the source control system.">
+
+Pulling code during a deployment is One way source control systems can fit 
+into the deployment process. 
+
+Note that some developers recommend deployment pipelines package the source 
+code to deploy it and never have a production environment touch a source 
+control system directly. However, for small scale deployments it's often
+easiest to pull from source code when you're getting started instead of 
+figuring out how to wrap the Python code in a system installation package.
+
 
 ## Source control systems
 * [Git](http://git-scm.com/) is a free and open source distributed version
@@ -51,12 +62,14 @@ as Git or Mercurial.
 
 
 ## Source control resources
-* [Pro Git](http://git-scm.com/book) is a free open source book that walks 
-  through all aspects of using the version control system.
-
 * [Staging Servers, Source Control & Deploy Workflows, And Other Stuff Nobody Teaches You](http://www.kalzumeus.com/2010/12/12/staging-servers-source-control-deploy-workflows-and-other-stuff-nobody-teaches-you/) 
   is a comprehensive overview by Patrick McKenzie of why you need source 
   control.
+
+* [Version control best practices](https://blog.rainforestqa.com/2014-05-28-version-control-best-practices/)
+  is a good write up of how to work with version control systems. The post is 
+  part of an ongoing deployment guide written by the folks at 
+  [Rainforest](https://www.rainforestqa.com/).
 
 * This lighthearted guide to the 
   [ten astonishments in version control history](http://www.flourish.org/blog/?p=397) 
@@ -74,6 +87,11 @@ as Git or Mercurial.
 
 * [About version control](http://git-scm.com/book/en/Getting-Started-About-Version-Control) 
 reviews the basics of distributed version control systems.
+
+
+## Git resources
+* [Pro Git](http://git-scm.com/book) is a free open source book that walks 
+  through all aspects of using the version control system.
 
 * [A Hacker's Guide to Git](http://wildlyinaccurate.com/a-hackers-guide-to-git)
   covers the basics as well as more advanced Git commands while explaining each
