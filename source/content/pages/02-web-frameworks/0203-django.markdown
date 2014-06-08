@@ -74,6 +74,11 @@ Django项目的稳定、性能、社区自其诞生的十年来取得了极大�
   is a Django performance blog post with some tips on measuring performance
   and optimizing based on the measured results.
 
+* [Django Debug Toolbar](http://django-debug-toolbar.readthedocs.org/en/1.2/) 
+  is a powerful Django ORM database query inspection tool. Highly recommended
+  during development to ensure you're writing reasonable query code. 
+  [Django Silk](http://mtford.co.uk/blog/2/) is another inspection tool and
+  has capabilities to do more than just SQL inspection.
 
 ## Django视频
 * [GoDjango](https://godjango.com/) 提供怎样构建Django应用的免费短视频教程。
